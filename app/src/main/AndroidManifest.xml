@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.naruto.trango">
+
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme"
+		android:usesCleartextTraffic="true"
+		tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+		<activity android:name=".SOSActivity"></activity>
+		<activity android:name=".checkIn_checkOut.RoutesActivity" />
+		<activity android:name=".trango_profile.RedeemActivity" />
+		<activity android:name=".trango_services.Services_Home_Page" />
+		<activity android:name=".trango_profile.MyTripsActivity" />
+		<activity android:name=".cabs_n_more.outstation.OutstationHomepageActivity" />
+		<activity android:name=".cabs_n_more.CabHomepageActivity" />
+		<!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+		<activity android:name=".trango_profile.ProfileActivity" />
+		<activity android:name=".transaction_history.TrangoWalletActivity" />
+		<activity android:name=".checkIn_checkOut.Make_Payment" />
+		<activity android:name=".checkIn_checkOut.OcrPage" />
+		<activity android:name=".checkIn_checkOut.Checkout" />
+		<activity android:name=".homepage.MainHomepage">
+			<intent-filter>
+				<action android:name="android.intent.action.SEARCH" />
+			</intent-filter>
+		</activity>
+		<!--
+			 The API key for Google Maps-based APIs is defined as a string resource.
+			 (See the file "res/values/google_maps_api.xml").
+			 Note that the API key is linked to the encryption key used to sign the APK.
+			 You need a different API key for each encryption key, including the release key that is used to
+			 sign the APK for publishing.
+			 You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+		<activity android:name=".login.LoginActivity" />
+		<activity android:name=".on_boarding.OnBoardingActivity" />
+		<activity android:name=".SplashActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".local_transport.LocalsActivity" />
+		<activity android:name=".cabs_n_more.outstation.ActiveBookingDetails" />
+		<activity android:name=".cabs_n_more.outstation.MyOutStationBookings" />
+		<activity android:name=".cabs_n_more.outstation.VehicleOptionPage" />
+		<activity android:name=".cabs_n_more.outstation.ReviewOrder" />
+		<activity android:name=".transit.MainMap" />
+		<activity android:name=".checkIn_checkOut.CheckIn" />
+		<activity android:name=".checkIn_checkOut.Scan_Checkout" />
+
+		<meta-data
+			android:name="com.google.android.geo.API_KEY"
+			android:value="@string/google_maps_key" />
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

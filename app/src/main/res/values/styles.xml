@@ -1,0 +1,98 @@
+<resources>
+
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+
+	<!--login fragment-->
+	<style name="button_style_1">
+		<item name="android:layout_weight">1</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:background">@drawable/green_button_click</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:fontFamily">@font/montserrat_semi_bold</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<!--login credential fragment-->
+	<style name="TextLabel" parent="TextAppearance.Design.Hint">
+		<item name="android:textSize">10sp</item>
+		<item name="android:textColor">@android:color/black</item>
+		<item name="android:fontFamily">@font/gotham_book</item>
+	</style>
+
+	<!--homepage-->
+
+
+	<style name="button_round">
+		<item name="android:paddingTop">24dp</item>
+		<item name="android:paddingBottom">24dp</item>
+		<item name="android:paddingLeft">8dp</item>
+		<item name="android:paddingRight">8dp</item>
+		<item name="android:background">@drawable/button_rounded_red</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:fontFamily">@font/montserrat_semi_bold</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:singleLine">true</item>
+	</style>
+
+	<style name="wallet_menu_btn" parent="TextAppearance.AppCompat.Widget.Button.Borderless.Colored">
+		<item name="backgroundTint">@color/dark_spring_green</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="SwitchCompatStyle" >
+		<item name="android:thumb">@drawable/switch_thumb</item>
+		<item name="android:track">@drawable/switch_track</item>
+	</style>
+
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+	<style name="custom_toolbar_style" parent="AppTheme">
+		<item name="android:fontFamily">@font/montserrat_medium</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<style name="DialogAnimation">
+		<item name="android:windowEnterAnimation">@anim/slide_up</item>
+		<item name="android:windowExitAnimation">@anim/slide_down</item>
+	</style>
+
+	<style name="MyTabLayoutTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+		<item name="android:textSize">15sp</item>
+		<item name="android:fontFamily">@font/montserrat_semi_bold</item>
+	</style>
+
+	<style name="button_style_3">
+		<item name="android:paddingTop">14dp</item>
+		<item name="android:paddingBottom">14dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:gravity">center</item>
+		<item name="android:background">@drawable/background_button3</item>
+		<item name="android:textSize">13sp</item>
+		<item name="android:fontFamily">@font/montserrat_semi_bold</item>
+		<item name="android:textColor">@color/black2</item>
+		<item name="android:singleLine">true</item>
+	</style>
+
+
+	<style name="SCBSwitch" parent="Theme.AppCompat.Light">
+		<!-- active thumb & track color (30% transparency) -->
+		<item name="colorControlActivated">#46bdbf</item>
+
+		<!-- inactive thumb color -->
+		<item name="colorSwitchThumbNormal">#f1f1f1
+		</item>
+
+		<!-- inactive track color (30% transparency) -->
+		<item name="android:colorForeground">#42221f1f
+		</item>
+	</style>
+
+</resources>

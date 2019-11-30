@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item android:id="@+id/services_support"
+		android:title="Support"
+		android:icon="@drawable/tec_support_white"
+		app:showAsAction="always" />
+
+</menu>

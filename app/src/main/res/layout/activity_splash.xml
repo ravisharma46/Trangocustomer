@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:ignore="HardcodedText"
+	android:background="@color/spring_green"
+	tools:context=".SplashActivity">
+
+	<ImageView
+		android:id="@+id/splash_icon"
+		android:layout_marginTop="72dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_width="match_parent"
+		android:layout_centerHorizontal="true"
+		android:layout_height="104dp"
+		android:src="@drawable/big_app_icon"
+		android:contentDescription="app logo" />
+	<ImageView
+		android:layout_alignParentEnd="true"
+		android:layout_width="wrap_content"
+		android:scaleX=".7"
+		android:layout_marginBottom="104dp"
+		android:layout_above="@+id/splash_background1"
+		android:layout_height="wrap_content"
+		android:background="@drawable/clouds"
+		android:contentDescription="clouds" />
+
+	<ImageView
+		android:id="@+id/splash_background1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/splash_road1"
+		android:background="@drawable/splash_background"
+		android:contentDescription="splash background" />
+
+	<!-- for animation purpose -->
+	<ImageView
+		android:id="@+id/splash_background2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/splash_road1"
+		android:background="@drawable/splash_background"
+		android:contentDescription="splash background" />
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/splash_bus"
+		android:layout_marginStart="104dp"
+		android:layout_above="@+id/splash_road1"
+		android:contentDescription="bus" />
+
+	<ImageView
+		android:id="@+id/splash_road1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:scaleType="fitXY"
+		android:src="@drawable/road"
+		android:contentDescription="road" />
+
+	<!-- for animation purpose -->
+	<ImageView
+		android:id="@+id/splash_road2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:scaleType="fitXY"
+		android:src="@drawable/road"
+		android:contentDescription="road" />
+
+</RelativeLayout>

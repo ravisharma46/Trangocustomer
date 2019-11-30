@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="depart" >
+		<item>Depart now</item>
+		<item>Depart later</item>
+	</string-array>
+</resources>

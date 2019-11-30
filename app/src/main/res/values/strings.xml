@@ -1,0 +1,48 @@
+<resources>
+	<string name="app_name">Trango</string>
+
+	<!-- TODO: Remove or change this placeholder text -->
+
+
+	<string name="how_it_works">How it Works</string>
+	<string name="smart_parking_featured">Smart Transit Featured</string>
+
+	<string name="featured_venues">Featured Venues</string>
+	<string name="find_desc">Search for all the available public transport routes available for your destination at this moment</string>
+
+	<string name="locate_on_map_desc">Provides you with the location of the public transport stop</string>
+	<string name="advance_book_desc">Book your seat or ticket right within the app</string>
+	<string name="park_desc">Information on transit services available near the stop.</string>
+	<string name="free_parking_desc">Get all the information about buses on your route with a single tap</string>
+
+	<string name="paid_parking_desc">Get all the information about metro on your route with a single tap</string>
+	<string name="garage_parking_desc">Book a cab ride for you</string>
+	<string name="college_parking_desc">Share your cab ride with people on the same route</string>
+	<string name="airport_parking_desc">Rent a cab for your next long way trip</string>
+	<string name="where_to_take">Where to Take?</string>
+
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="title_activity_maps">Map</string>
+	<string name="short_desc">Lorem Ipsum is simply dummy text of the printing
+        and typesetting industry.</string>
+
+	<string name="scan_licence">Scan Licence Plate no.</string>
+
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="open_navigation_drawer">Open navigation drawer</string>
+	<string name="close_navigation_drawer">Close navigation drawer</string>
+	<string name="nearby_parking_area">Nearby Parking\narea available</string>
+
+	<string name="navigate">Navigate</string>
+	<string name="navigation_drawer_open">Open navigation drawer</string>
+	<string name="navigation_drawer_close">Close navigation drawer</string>
+	<string name="vacant_slots">Vacant\nslots</string>
+	<string-array name="select_partner_type">
+		<item>Government</item>
+		<item>Private</item>
+	</string-array>
+
+
+</resources>

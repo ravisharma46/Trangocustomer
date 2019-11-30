@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:ignore="HardcodedText,UnusedAttribute">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginVertical="8dp"
+        app:contentInsetEnd="8dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/map_navicon"
+        app:titleTextColor="@android:color/black">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="-104dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="Gurgaon"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

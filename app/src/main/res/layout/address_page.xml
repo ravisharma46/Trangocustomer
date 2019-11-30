@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical" >
+
+	<!--Toolbaar-->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:orientation="horizontal"
+		android:paddingBottom="10dp">
+		<ImageView
+			android:id="@+id/back_btn"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_gravity="center"
+			android:paddingLeft="8dp"
+			android:paddingTop="16dp"
+			android:paddingRight="8dp"
+			android:paddingBottom="8dp"
+			android:src="@drawable/arrow_back_red" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="4dp"
+			android:fontFamily="@font/montserrat_semi_bold"
+			android:text="Add new Address"
+			android:textColor="@color/black"
+			android:textSize="14sp" />
+	</LinearLayout>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/background4" />
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+		<fragment
+			android:id="@+id/map"
+			class="com.google.android.gms.maps.SupportMapFragment"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/marker"
+			android:layout_marginBottom="24dp"
+			android:layout_gravity="center"/>
+
+		<ImageView
+			android:id="@+id/gps"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_gravity="end|bottom"
+			android:layout_marginEnd="16dp"
+			android:layout_marginBottom="16dp"
+			android:background="@color/white"
+			android:elevation="8dp"
+			android:padding="8dp"
+			android:src="@drawable/gps" />
+
+	</FrameLayout>
+
+	<ProgressBar
+		android:id="@+id/progress_horizontal"
+		android:visibility="visible"
+		android:layout_width="match_parent"
+		android:layout_height="4dp"
+		android:indeterminate="true"
+		android:layout_marginTop="-2dp"
+		style="?android:attr/progressBarStyleHorizontal" />
+
+	<LinearLayout
+		android:paddingTop="16dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginEnd="16dp"
+		android:layout_width="match_parent"
+		android:paddingBottom="8dp"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="0dp"
+			app:hintTextAppearance="@style/TextLabel">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:id="@+id/complete_address"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/gotham_book_regular"
+				android:hint="Complete Address"
+				android:inputType="textEmailAddress|textAutoComplete|textAutoCorrect|textFilter"
+				android:paddingTop="24dp"
+				android:textColor="@color/black"
+				android:textSize="14sp" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<TextView
+			android:id="@+id/done"
+			android:layout_marginTop="24dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Done"
+			style="@style/button_style_1"/>
+	</LinearLayout>
+
+</LinearLayout>

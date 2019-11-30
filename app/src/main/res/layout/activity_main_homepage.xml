@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:ignore="HardcodedText,UnusedAttribute,SmallSp,RtlHardcoded,Autofill,ContentDescription,RtlSymmetry"
+	android:background="@color/home_background"
+	android:fitsSystemWindows="true" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:layout_marginBottom="48dp">
+
+		<include layout="@layout/custom_home_toolbar" />
+
+		<androidx.core.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fillViewport="true"
+			android:fitsSystemWindows="true">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<!-- Below toolbar-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="152dp"
+					android:paddingTop="24dp"
+					android:background="@color/app_color"
+					android:orientation="vertical">
+					<ImageView
+						android:layout_width="64dp"
+						android:layout_height="64dp"
+						android:layout_marginStart="24dp"
+						android:src="@drawable/m6" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="64dp"
+						android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+						android:orientation="horizontal"
+						android:weightSum="4"
+						android:paddingBottom="4dp">
+						<TextView
+							android:layout_width="0dp"
+							android:layout_height="match_parent"
+							android:layout_weight="3.4"
+							android:paddingRight="96dp"
+							android:gravity="center|start"
+							android:fontFamily="@font/montserrat_bold"
+							android:text="Find your perfect transit to move."
+							android:textColor="#FFFFFF"
+							android:textSize="18sp" />
+
+						<RelativeLayout
+							android:id="@+id/locate_me"
+							android:layout_width="0dp"
+							android:layout_height="64dp"
+							android:layout_weight="0.6"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:layout_marginEnd="8dp">
+							<de.hdodenhof.circleimageview.CircleImageView
+								android:id="@+id/iv_home_locationbg"
+								android:layout_width="wrap_content"
+								android:layout_height="48dp"
+								android:background="@drawable/circle"
+								android:elevation="8dp" />
+
+							<ImageView
+								android:layout_width="wrap_content"
+								android:layout_height="48dp"
+								android:elevation="8dp"
+								android:layout_alignParentTop="true"
+								android:layout_centerHorizontal="true"
+								android:src="@drawable/car_location"/>
+
+							<TextView
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:gravity="center"
+								android:layout_below="@+id/iv_home_locationbg"
+								android:fontFamily="@font/gotham_book"
+								android:text="Locate me"
+								android:textColor="@color/white"
+								android:textSize="10sp" />
+						</RelativeLayout>
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<!--How it Works-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/activity_horizontal_margin"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="16dp"
+						android:text="@string/how_it_works"
+						android:textColor="@color/black"
+						android:textSize="18sp"
+						android:fontFamily="@font/montserrat_semi_bold"/>
+
+					<View
+						android:layout_width="80sp"
+						android:layout_height="4dp"
+						android:layout_marginTop="4dp"
+						android:background="@drawable/round_corner" />
+
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/recycler_view1_agenda"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp" />
+					<!--Space of Indicator-->
+				</LinearLayout>
+
+				<!--Smart Parking Featured-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:layout_marginRight="16dp"
+					android:layout_marginLeft="@dimen/activity_horizontal_margin"
+					android:orientation="vertical">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="4dp"
+						android:text="@string/smart_parking_featured"
+						android:textColor="@color/black"
+						android:textSize="18sp"
+						android:fontFamily="@font/montserrat_semi_bold"/>
+
+					<View
+						android:layout_width="110dp"
+						android:layout_height="4dp"
+						android:layout_marginTop="4dp"
+						android:background="@drawable/round_corner" />
+
+					<!--Find-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp">
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon15"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/search"/>
+
+						<View
+							android:id="@+id/line15"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon15"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title15"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon15"
+							android:singleLine="true"
+							android:text="Find"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold"/>
+
+						<TextView
+							android:id="@+id/description15"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title15"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon15"
+							android:text="@string/find_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+					<!--Locate on Map-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon12"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/location" />
+
+						<View
+							android:id="@+id/line12"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon12"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title12"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon12"
+							android:text="Locate on Map"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description12"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title12"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon12"
+							android:text="@string/locate_on_map_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+
+					</RelativeLayout>
+
+					<!--Navigate-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon13"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							app:fabSize="normal"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/navigate_red"/>
+
+						<View
+							android:id="@+id/line13"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon13"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title13"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon13"
+							android:text="Navigate"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description13"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title13"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon13"
+							android:text="Maps a route from your current location to the stop"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+					<!--Advance Book-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon14"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/time"/>
+
+						<View
+							android:id="@+id/line"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon14"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title14"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon14"
+							android:singleLine="true"
+							android:text="Advance Book"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description14"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title14"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon14"
+							android:text="@string/advance_book_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+					<!--Park-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon11"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/ic_parking"/>
+
+						<TextView
+							android:id="@+id/title11"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon11"
+							android:singleLine="true"
+							android:text="Move"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description11"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title11"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon11"
+							android:text="@string/park_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+				</LinearLayout>
+
+				<!--Featured Venues-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="32dp"
+					android:background="@color/white"
+					android:orientation="vertical">
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginTop="24dp"
+						android:text="@string/featured_venues"
+						android:textColor="@color/black"
+						android:textSize="18sp"
+						android:fontFamily="@font/montserrat_semi_bold" />
+
+					<View
+						android:layout_width="80sp"
+						android:layout_height="4dp"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginTop="4dp"
+						android:background="@drawable/round_corner" />
+
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/recycler_view3_agenda"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="32dp"
+						android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+						android:layout_marginTop="24dp" />
+				</LinearLayout>
+
+				<!--Where to Take-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="16dp"
+					android:layout_marginLeft="@dimen/activity_horizontal_margin"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp"
+						android:text="@string/where_to_take"
+						android:textColor="@color/black"
+						android:textSize="18sp"
+						android:fontFamily="@font/montserrat_semi_bold" />
+
+					<View
+						android:layout_width="80sp"
+						android:layout_height="4dp"
+						android:layout_marginTop="4dp"
+						android:background="@drawable/round_corner" />
+
+					<!--Bus Stops-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp">
+
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon5"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:padding="1dp"
+							android:src="@mipmap/m4"/>
+
+						<View
+							android:id="@+id/line5"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon5"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title5"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon5"
+							android:singleLine="true"
+							android:text="Bus Stops"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description5"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title5"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon5"
+							android:text="@string/free_parking_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+					<!--// Paid Parking-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon2"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/m_c3_2"/>
+
+						<View
+							android:id="@+id/line2"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon2"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title2"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon2"
+							android:text="Metro Stations"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description2"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title2"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon2"
+							android:text="@string/paid_parking_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+					<!--// Garage-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon3"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:onClick="cabHomePageIntent"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/ic_garage"/>
+
+						<View
+							android:id="@+id/line3"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon3"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title3"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon3"
+							android:text="Cabs Services"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description3"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title3"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon3"
+							android:text="@string/garage_parking_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+					<!--// College Parking-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon4"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/m_c3_4"/>
+
+						<View
+							android:id="@+id/line4"
+							android:layout_width="1dp"
+							android:layout_marginLeft="44dp"
+							android:layout_below="@id/icon4"
+							android:layout_height="56dp"
+							android:background="@drawable/vertical_dotted_line"/>
+
+						<TextView
+							android:id="@+id/title4"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon4"
+							android:text="Pool Cabs"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold" />
+
+						<TextView
+							android:id="@+id/description4"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title4"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon4"
+							android:text="@string/college_parking_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+					<!--//Airport-->
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<com.google.android.material.floatingactionbutton.FloatingActionButton
+							android:id="@+id/icon1"
+							android:layout_width="56dp"
+							android:layout_height="56dp"
+							app:backgroundTint="@color/white"
+							android:layout_marginLeft="16dp"
+							android:layout_alignParentLeft="true"
+							android:layout_alignParentStart="true"
+							android:layout_alignParentTop="true"
+							android:layout_marginRight="24dp"
+							android:layout_marginTop="1dp"
+							android:elevation="8dp"
+							android:src="@drawable/ic_plane"/>
+
+						<TextView
+							android:id="@+id/title1"
+							android:layout_marginTop="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/icon1"
+							android:text="Ondemand Cabs"
+							android:textColor="@color/black"
+							android:textSize="16sp"
+							android:fontFamily="@font/montserrat_semi_bold"/>
+
+						<TextView
+							android:id="@+id/description1"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/title1"
+							android:paddingBottom="24dp"
+							android:layout_marginTop="8dp"
+							android:layout_toRightOf="@id/icon1"
+							android:text="@string/airport_parking_desc"
+							android:textSize="13sp"
+							android:fontFamily="@font/gotham_book"/>
+					</RelativeLayout>
+
+				</LinearLayout>
+
+				<!--Everywhere you want to Transit-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@color/white"
+					android:orientation="vertical"
+					android:paddingBottom="32dp"
+					android:paddingTop="32dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="Everywhere you want to Transit"
+						android:textColor="@color/black"
+						android:textSize="18sp"
+						android:fontFamily="@font/montserrat_semi_bold" />
+
+					<View
+						android:layout_width="80sp"
+						android:layout_height="4dp"
+						android:layout_gravity="center"
+						android:layout_marginTop="4dp"
+						android:background="@drawable/round_corner" />
+
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/recycler_view5_agenda"
+						android:layout_marginTop="24dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="8dp" />
+
+					<!--RecyclerView Indicator-->
+
+					<com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator
+						android:id="@+id/recycler_view5_indicator"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginBottom="8dp"
+						android:layout_marginTop="24dp"
+						app:dotColor="@color/colorPrimary"
+						app:dotRadius="4dp"
+						app:selectedDotColor="@color/colorPrimary"
+						app:selectedDotRadius="8dp"
+						app:supportRTL="true" />
+
+					<Button
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginBottom="8dp"
+						android:layout_marginTop="32dp"
+						android:background="@color/white"
+						android:paddingBottom="16dp"
+						android:paddingLeft="16dp"
+						android:paddingRight="16dp"
+						android:paddingTop="16dp"
+						android:text="View Locations"
+						android:textAllCaps="false"
+						android:fontFamily="@font/montserrat_semi_bold"
+						android:textColor="@color/colorPrimary"
+						android:textSize="16sp" />
+				</LinearLayout>
+
+				<!--Feedback to Improve-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/black_banner"
+					android:orientation="vertical"
+					android:paddingBottom="32dp"
+					android:paddingTop="32dp">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:text="Feedback to Improve"
+						android:textColor="@color/white"
+						android:fontFamily="@font/gotham_medium"
+						android:textSize="22sp" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:text="Your Transit!"
+						android:textColor="@color/white"
+						android:fontFamily="@font/gotham_medium"
+						android:textSize="22sp" />
+
+					<EditText
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginEnd="?actionBarSize"
+						android:layout_marginTop="40dp"
+						android:backgroundTint="#FFFFFF"
+						android:hint="e-Mail address..."
+						android:textColorHint="@color/light_black"
+						android:paddingBottom="16dp"
+						android:textColor="@color/white"
+						android:textColorHighlight="@color/white"
+						android:fontFamily="@font/gotham_light_italic"
+						tools:ignore="TextFields" />
+
+					<Button
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/activity_horizontal_margin"
+						android:layout_marginTop="32dp"
+						android:paddingBottom="20dp"
+						android:paddingLeft="32dp"
+						android:paddingRight="32dp"
+						android:paddingTop="18dp"
+						android:elevation="18dp"
+						android:text="Request a Demo"
+						android:textAllCaps="false"
+						android:textSize="16sp"
+						android:fontFamily="@font/montserrat_semi_bold"/>
+
+				</LinearLayout>
+
+				<!--Logo-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@color/white"
+					android:orientation="vertical"
+					android:paddingBottom="24dp"
+					android:paddingTop="32dp">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:gravity="center"
+						android:textColor="@color/black2"
+						android:text="For more automobile related problem, visit"
+						android:textSize="12sp"
+						android:fontFamily="@font/gotham_book"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginTop="8dp"
+						android:fontFamily="@font/ethnocentric"
+						android:text="Trango"
+						android:textColor="@color/colorPrimaryDark"
+						android:textSize="22sp"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</androidx.core.widget.NestedScrollView>
+
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_alignParentBottom="true"
+		android:layout_height="76dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<com.google.android.material.bottomnavigation.BottomNavigationView
+				android:id="@+id/navigation"
+				android:layout_width="match_parent"
+				android:layout_height="48dp"
+				android:layout_alignParentBottom="true"
+				android:layout_marginTop="0dp"
+				android:background="@color/spring_green"
+				app:itemIconTint="@color/bottom_nav_color"
+				app:labelVisibilityMode="unlabeled"
+				app:menu="@menu/bottom_navigation_menu" />
+		</RelativeLayout>
+
+		<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_height="wrap_content">
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:elevation="4dp"
+				android:id="@+id/iv_sm"
+				android:onClick="callScanHomepageIntent"
+				android:src="@drawable/scan_qr"
+				android:layout_gravity="bottom|center"
+				style="?android:attr/imageButtonStyle"
+				android:padding="4dp"
+				android:layout_marginBottom="10dp"
+				android:background="@drawable/circle"/>
+		</FrameLayout>
+
+	</RelativeLayout>
+
+</RelativeLayout>
+
+

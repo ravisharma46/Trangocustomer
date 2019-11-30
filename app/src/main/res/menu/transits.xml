@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_settings1"
+        android:title="My Transits"/>
+
+    <item android:id="@+id/action_settings2"
+        android:title="Bus"
+        app:showAsAction="withText"
+        android:icon="@drawable/map_navicon"/>
+
+    <item android:id="@+id/action_settings3"
+        android:title="Train"
+        android:icon="@drawable/map_navicon"/>
+
+    <item android:id="@+id/action_settings4"
+        android:title="Metro"
+        android:icon="@drawable/map_navicon"/>
+
+</menu>

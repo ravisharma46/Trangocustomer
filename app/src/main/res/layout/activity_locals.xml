@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".local_transport.LocalsActivity">
+
+	<include layout="@layout/custom_locals_toolbar" />
+
+	<com.google.android.material.tabs.TabLayout
+		android:id="@+id/locals_tabs"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="?actionBarSize"
+		app:tabBackground="@color/spring_green"
+		app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+		app:tabSelectedTextColor="@color/dark_spring_green"
+		app:tabIndicatorColor="@color/dark_spring_green"
+		app:tabMode="fixed"
+		app:tabGravity="fill"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_marginBottom="48dp"
+		android:layout_below="@+id/locals_tabs"
+		android:layout_height="wrap_content">
+
+		<androidx.viewpager.widget.ViewPager
+			android:id="@+id/locals_viewpager"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+	</FrameLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_alignParentBottom="true"
+		android:layout_height="76dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<com.google.android.material.bottomnavigation.BottomNavigationView
+				android:id="@+id/navigation"
+				android:layout_width="match_parent"
+				android:layout_height="48dp"
+				android:layout_alignParentBottom="true"
+				android:layout_marginTop="0dp"
+				android:background="@color/spring_green"
+				app:itemIconTint="@color/bottom_nav_color"
+				app:labelVisibilityMode="unlabeled"
+				app:menu="@menu/bottom_navigation_menu" />
+		</RelativeLayout>
+
+
+		<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_height="wrap_content">
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:elevation="4dp"
+				android:id="@+id/iv_sm"
+				android:src="@drawable/scan_qr"
+				android:layout_gravity="bottom|center"
+				style="?android:attr/imageButtonStyle"
+				android:padding="4dp"
+				android:layout_marginBottom="10dp"
+				android:background="@drawable/circle"/>
+		</FrameLayout>
+
+
+
+	</RelativeLayout>
+
+</RelativeLayout>

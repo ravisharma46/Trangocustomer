@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".transaction_history.WalletStatementFragment"
+	tools:ignore="HardcodedText,RtlSymmetry,UnusedAttribute,SmallSp,NestedWeights,ContentDescription,UselessParent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingBottom="0dp"
+		android:weightSum="3.5">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="@color/spring_green"
+			android:orientation="vertical"
+
+			android:paddingHorizontal="16dp"
+			android:weightSum="6">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				android:layout_gravity="start|top"
+				android:layout_weight="3"
+				android:src="@drawable/coins" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:orientation="horizontal"
+				android:weightSum="2">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:fontFamily="@font/gotham_medium"
+					android:gravity="start"
+					android:text="Current Coins"
+					android:textColor="@android:color/black"
+					android:textSize="13sp" />
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:fontFamily="@font/gotham_medium"
+					android:gravity="end"
+					android:paddingEnd="40dp"
+					android:text="10"
+					android:textColor="@color/dark_spring_green"
+					android:textSize="14sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center|start"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:text="Value of"
+					android:textColor="@color/black"
+					android:textSize="12sp" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:text=" 1 coin = \u20B9 1"
+					android:textColor="@color/dark_spring_green"
+					android:textSize="12sp" />
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/montserrat_semi_bold"
+			android:paddingHorizontal="16dp"
+			android:paddingVertical="20dp"
+			android:text="History"
+			android:textColor="@color/dark_spring_green"
+			android:textSize="15sp" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/wallet_history_recycler_view"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="2.5"
+			android:paddingHorizontal="16dp"
+			android:paddingVertical="8dp" />
+
+	</LinearLayout>
+
+</LinearLayout>

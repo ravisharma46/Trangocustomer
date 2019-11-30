@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/home_background"
+	tools:ignore="HardcodedText,UnusedAttribute,ContentDescription"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	tools:context=".SOSActivity">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/sos_toolbar_widget"
+		android:layout_width="match_parent"
+		android:layout_height="?actionBarSize"
+		android:background="@android:color/white"
+		app:contentInsetEnd="8dp"
+		android:layout_alignParentTop="true"
+		app:title="Add Contact"
+		app:contentInsetStartWithNavigation="0dp"
+		app:navigationIcon="@drawable/arrow_back_red" >
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="end"
+				android:layout_marginStart="136dp"
+				android:paddingHorizontal="16dp"
+				android:backgroundTint="@color/red_dark"
+				android:background="@drawable/round_rectangle_textview"
+				android:text="SOS" />
+		</LinearLayout>
+	</androidx.appcompat.widget.Toolbar>
+
+	<TextView
+		android:id="@+id/sos_content"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="24dp"
+		android:layout_marginHorizontal="16dp"
+		android:layout_marginBottom="16dp"
+		android:textSize="16sp"
+		android:layout_below="@+id/sos_toolbar_widget"
+		android:text="Sms will be automatically sent to these contacts whenever an alert is
+		triggered. Regular SMS charges will apply." />
+
+	<RelativeLayout
+		android:id="@+id/sos_details_head"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:layout_below="@+id/sos_content"
+		android:layout_marginHorizontal="16dp" >
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="MESSAGE"
+			android:layout_alignParentStart="true" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="EDIT"
+			android:textStyle="bold"
+			android:layout_alignParentEnd="true" />
+	</RelativeLayout>
+
+	<EditText
+		android:id="@+id/et_sos_message"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="16dp"
+		android:padding="8dp"
+		android:layout_below="@+id/sos_details_head"
+		android:text="I am in danger. Please help me out."
+		android:background="@android:color/white"
+		android:inputType="textAutoComplete"
+		android:autofillHints="text"
+		tools:ignore="LabelFor" />
+
+	<TextView
+		android:id="@+id/sos_contact_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:text="Contact"
+		android:gravity="start|center"
+		android:layout_below="@id/et_sos_message"
+		android:layout_marginHorizontal="16dp" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginHorizontal="16dp"
+		android:background="@android:color/white"
+		android:layout_below="@+id/sos_contact_title"
+		android:padding="8dp" >
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:weightSum="9"
+			android:orientation="horizontal" >
+			<ImageView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.5"
+				android:elevation="8dp"
+				android:src="@drawable/dummy_contact_image" />
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:gravity="center|start"
+				android:layout_weight="6.5"
+				android:layout_marginHorizontal="16dp"
+				android:orientation="vertical" >
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Abhijeet Pathak" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="+919999155103" />
+			</LinearLayout>
+
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="match_parent" >
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentEnd="true"
+					android:src="@drawable/dots_3" />
+			</RelativeLayout>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Add Contact"
+			android:padding="8dp"
+			android:layout_gravity="center"
+			android:drawableStart="@drawable/ic_add"
+			android:gravity="center" />
+	</LinearLayout>
+
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:id="@+id/sos_coordinate_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="16dp"
+		android:layout_marginVertical="8dp"
+		android:layout_alignParentBottom="true">
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:onClick="sendAlert"
+			android:background="@drawable/green_button_click"
+			android:text="Send Alert" />
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

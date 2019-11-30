@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".local_transport.MetroFragment">
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="20dp"
+		android:paddingTop="15dp"
+		android:paddingLeft="15dp"
+		>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Recent"/>
+
+
+	</LinearLayout>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal"
+			android:weightSum="3"
+			android:paddingBottom="20dp"
+			android:paddingLeft="25dp"
+			android:background="#fbf8ff"
+			android:paddingRight="25dp"
+			>
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					>
+					<ImageView
+						android:id="@+id/bus1"
+						android:layout_width="25dp"
+						android:layout_height="25dp"
+						android:src="@drawable/metro"/>
+					<TextView
+						android:id="@+id/bus1_no"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="310A"
+						android:textSize="10sp"
+						android:textStyle="bold"
+						android:layout_marginTop="10dp"
+						android:textColor="@color/black"
+						android:layout_marginLeft="8dp"
+						android:layout_toRightOf="@+id/bus1"/>
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="Mori Gate Terminal"
+						android:textSize="10sp"
+						android:textColor="@color/black"
+						android:layout_below="@id/bus1"
+						/>
+
+
+
+				</RelativeLayout>
+
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				>
+
+				<TextView
+					android:id="@+id/arrival_time_heading"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="12sp"
+					android:layout_marginTop="8dp"
+					android:layout_gravity="center_horizontal"
+					android:text="Arrival time" />
+
+				<RelativeLayout
+					android:id="@+id/arrival_time_RL"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal"
+					android:paddingTop="20dp"
+					>
+
+					<TextView
+						android:id="@+id/arrival_time_TV1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="10sp"
+						android:textColor="@color/spring_green"
+						android:text="1:20PM -" />
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="1:22PM"
+						android:textColor="@color/spring_green"
+						android:textSize="10sp"
+						android:layout_toRightOf="@id/arrival_time_TV1"/>
+
+
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/arrival_time_RL2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal"
+					>
+
+					<TextView
+						android:id="@+id/arrival_time_TV2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="8sp"
+						android:text="1:20PM -" />
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="1:22PM"
+						android:textSize="8sp"
+						android:layout_toRightOf="@id/arrival_time_TV2"/>
+
+
+
+				</RelativeLayout>
+
+
+
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Congestion"
+					android:textSize="12sp"
+					android:layout_marginTop="8dp"
+					android:layout_gravity="center_horizontal"
+					/>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:gravity="center_vertical"
+					android:textSize="10sp"
+					android:layout_marginTop="20dp"
+					android:textColor="@color/spring_green"
+					android:text="Low"/>
+
+
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+
+	</androidx.cardview.widget.CardView>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="20dp"
+		android:paddingTop="15dp"
+		android:paddingLeft="15dp"
+		>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Delhi Transport Corporation(DTC)"/>
+
+
+	</LinearLayout>
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				android:weightSum="3"
+				android:paddingBottom="10dp"
+				android:paddingLeft="25dp"
+				android:background="#fbf8ff"
+				android:paddingRight="25dp"
+				>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical">
+
+						<ImageView
+							android:id="@+id/bus2"
+							android:layout_width="25dp"
+							android:layout_height="25dp"
+							android:src="@drawable/metro" />
+
+						<TextView
+							android:id="@+id/bus2_no"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="8dp"
+							android:layout_marginTop="10dp"
+							android:layout_toRightOf="@+id/bus2"
+							android:text="310A"
+							android:textColor="@color/black"
+							android:textSize="10sp"
+							android:textStyle="bold" />
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/bus2"
+							android:text="Mori Gate Terminal"
+							android:textColor="@color/black"
+							android:textSize="10sp" />
+
+
+					</RelativeLayout>
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+
+					<TextView
+						android:id="@+id/arrival_time_heading2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="12sp"
+						android:layout_marginTop="8dp"
+						android:layout_gravity="center_horizontal"
+						android:text="Arrival time" />
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL_second"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						android:paddingTop="20dp"
+						>
+
+						<TextView
+							android:id="@+id/arrival_time_TV1_second"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="10sp"
+							android:textColor="@color/spring_green"
+							android:text="1:20PM -" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:22PM"
+							android:textColor="@color/spring_green"
+							android:textSize="10sp"
+							android:layout_toRightOf="@id/arrival_time_TV1_second"/>
+
+
+
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL2_second"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						>
+
+						<TextView
+							android:id="@+id/arrival_time_TV2_second"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="8sp"
+							android:text="1:20PM -" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:22PM"
+							android:textSize="8sp"
+							android:layout_toRightOf="@id/arrival_time_TV2_second"/>
+
+
+
+					</RelativeLayout>
+
+
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Congestion"
+						android:textSize="12sp"
+						android:layout_marginTop="8dp"
+						android:layout_gravity="center_horizontal"
+						/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:gravity="center_vertical"
+						android:textSize="10sp"
+						android:layout_marginTop="20dp"
+						android:textColor="@color/spring_green"
+						android:text="Low"/>
+
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				android:weightSum="3"
+				android:paddingBottom="5dp"
+				android:paddingLeft="25dp"
+				android:background="#fbf8ff"
+				android:paddingRight="25dp"
+				>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical">
+
+						<ImageView
+							android:id="@+id/bus3"
+							android:layout_width="25dp"
+							android:layout_height="25dp"
+							android:src="@drawable/metro" />
+
+						<TextView
+							android:id="@+id/bus3_no"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="8dp"
+							android:layout_marginTop="10dp"
+							android:layout_toRightOf="@+id/bus3"
+							android:text="310A"
+							android:textColor="@color/black"
+							android:textSize="10sp"
+							android:textStyle="bold" />
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/bus3"
+							android:text="Mori Gate Terminal"
+							android:textColor="@color/black"
+							android:textSize="10sp" />
+
+
+					</RelativeLayout>
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+
+
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL_third"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						android:paddingTop="20dp"
+						>
+
+						<TextView
+							android:id="@+id/arrival_time_TV1_third"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="10sp"
+							android:textColor="@color/spring_green"
+							android:text="1:20PM -" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:22PM"
+							android:textColor="@color/spring_green"
+							android:textSize="10sp"
+							android:layout_toRightOf="@id/arrival_time_TV1_third"/>
+
+
+
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL2_third"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						>
+
+						<TextView
+							android:id="@+id/arrival_time_TV2_third"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="8sp"
+							android:text="1:20PM -" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:22PM"
+							android:textSize="8sp"
+							android:layout_toRightOf="@id/arrival_time_TV2_third"/>
+
+
+
+					</RelativeLayout>
+
+
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:gravity="center_vertical"
+						android:textSize="10sp"
+						android:layout_marginTop="20dp"
+						android:textColor="#ffc922"
+						android:text="Moderate"/>
+
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+
+
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				android:weightSum="3"
+				android:paddingBottom="5dp"
+				android:paddingLeft="25dp"
+				android:background="#fbf8ff"
+				android:paddingRight="25dp"
+				>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical">
+
+						<ImageView
+							android:id="@+id/bus4"
+							android:layout_width="25dp"
+							android:layout_height="25dp"
+							android:src="@drawable/metro" />
+
+						<TextView
+							android:id="@+id/bus4_no"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="8dp"
+							android:layout_marginTop="10dp"
+							android:layout_toRightOf="@+id/bus4"
+							android:text="310A"
+							android:textColor="@color/black"
+							android:textSize="10sp"
+							android:textStyle="bold" />
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/bus4"
+							android:layout_alignParentStart="true"
+							android:layout_marginStart="0dp"
+							android:text="Mori Gate Terminal"
+							android:textColor="@color/black"
+							android:textSize="10sp" />
+
+
+					</RelativeLayout>
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+
+
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL_fourth"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						android:paddingTop="20dp"
+						>
+
+						<TextView
+							android:id="@+id/arrival_time_TV1_fourth"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="10sp"
+							android:textColor="@color/mek_red"
+							android:text="1:20PM -" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:22PM"
+							android:textColor="@color/mek_red"
+							android:textSize="10sp"
+							android:layout_toRightOf="@id/arrival_time_TV1_fourth"/>
+
+
+
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL2_fourth"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						>
+
+						<TextView
+							android:id="@+id/arrival_time_TV2_fourth"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="8sp"
+							android:text="1:20PM -" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:22PM"
+							android:textSize="8sp"
+							android:layout_toRightOf="@id/arrival_time_TV2_fourth"/>
+
+
+
+					</RelativeLayout>
+
+
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:gravity="center_vertical"
+						android:textSize="10sp"
+						android:layout_marginTop="20dp"
+						android:textColor="@color/yellow2"
+						android:text="High"/>
+
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				android:weightSum="3"
+				android:paddingBottom="20dp"
+				android:paddingLeft="25dp"
+				android:background="#fbf8ff"
+				android:paddingRight="25dp"
+				>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical">
+
+						<ImageView
+							android:id="@+id/bus5"
+							android:layout_width="25dp"
+							android:layout_height="25dp"
+							android:src="@drawable/metro" />
+
+						<TextView
+							android:id="@+id/bus5_no"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="8dp"
+							android:layout_marginTop="10dp"
+							android:layout_toRightOf="@+id/bus5"
+							android:text="310A"
+							android:textColor="@color/black"
+							android:textSize="10sp"
+							android:textStyle="bold" />
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_below="@id/bus5"
+							android:layout_alignParentStart="true"
+							android:layout_marginStart="0dp"
+							android:text="Mori Gate Terminal"
+							android:textColor="@color/black"
+							android:textSize="10sp" />
+
+
+					</RelativeLayout>
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL_fifth"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						android:paddingTop="20dp">
+
+						<TextView
+							android:id="@+id/arrival_time_TV1_fifth"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:20PM -"
+							android:textColor="@color/mek_red"
+							android:textSize="10sp" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_toRightOf="@id/arrival_time_TV1_fifth"
+							android:text="1:22PM"
+							android:textColor="@color/mek_red"
+							android:textSize="10sp" />
+
+
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/arrival_time_RL2_fifth"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						>
+
+						<TextView
+							android:id="@+id/arrival_time_TV2_fifth"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="8sp"
+							android:text="1:20PM -" />
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1:22PM"
+							android:textSize="8sp"
+							android:layout_toRightOf="@id/arrival_time_TV2_fifth"/>
+
+
+
+					</RelativeLayout>
+
+
+
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_horizontal"
+						android:gravity="center_vertical"
+						android:textSize="10sp"
+						android:layout_marginTop="20dp"
+						android:textColor="@color/mek_red"
+						android:text="Insane"/>
+
+
+				</LinearLayout>
+
+
+			</LinearLayout>
+
+
+
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	style="?attr/buttonBarStyle"
+	tools:ignore="HardcodedText,UnusedAttribute"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Apply Promocode"
+		android:textColor="@color/mek_red"
+		android:textSize="16sp"
+		android:fontFamily="@font/montserrat_bold"
+		android:layout_margin="16dp"/>
+	<EditText
+		android:id="@+id/et_promocode"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		android:hint="Promocode"
+		android:autofillHints="text"
+		android:inputType="text"
+		android:textColor="@color/dark_spring_green"
+		android:textSize="14sp"/>
+
+	<Button
+		android:id="@+id/btn_promo_apply"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/green_button_click"
+		android:fontFamily="@font/montserrat_regular"
+		android:text="Apply"
+		android:layout_margin="16dp"
+		style="?attr/buttonBarButtonStyle"
+		android:textAllCaps="false"
+		android:textColor="@android:color/white"
+		android:textSize="14sp" />
+
+</LinearLayout>

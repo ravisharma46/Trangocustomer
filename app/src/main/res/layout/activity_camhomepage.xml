@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:ignore="HardcodedText,ContentDescription,UnusedAttribute,SmallSp"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:elevation="0dp"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="56dp"
+			android:background="@color/white"
+			app:popupTheme="@style/AppTheme.PopupOverlay"
+			app:contentInsetStartWithNavigation="0dp">
+			<ImageView
+				android:id="@+id/back_btn"
+				android:layout_width="28dp"
+				android:layout_height="28dp"
+				android:src="@drawable/arrow_back_red"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="Cabs &amp; More"
+				android:gravity="center"
+				android:layout_marginStart="8dp"
+				android:fontFamily="@font/montserrat_semi_bold"
+				android:textColor="@color/black"
+				android:textSize="14sp"/>
+		</androidx.appcompat.widget.Toolbar>
+
+	</com.google.android.material.appbar.AppBarLayout>
+	
+	<View
+		android:layout_marginTop="56dp"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/background4"/>
+	
+	<!--map container-->
+	<FrameLayout
+		android:id="@+id/map_container"
+		android:layout_marginTop="57dp"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<fragment
+			android:id="@+id/map"
+			android:name="com.google.android.gms.maps.SupportMapFragment"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			tools:context=".SOS.CabsAndMore.CAMHomepage" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="16dp"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="32dp"
+				android:background="@color/white"
+				android:elevation="16dp"
+				android:orientation="horizontal">
+				<ImageView
+					android:layout_width="8dp"
+					android:layout_height="8dp"
+					android:layout_gravity="center"
+					android:layout_marginStart="12dp"
+					android:src="@drawable/green_circle" />
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:paddingEnd="8dp"
+					android:paddingStart="12dp"
+					android:paddingTop="4dp"
+					android:paddingBottom="4dp"
+					android:layout_weight="1"
+					app:hintTextAppearance="@style/TextLabel">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/pickup_field"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:fontFamily="@font/montserrat_semi_bold"
+						android:hint="Pickup Location"
+						android:paddingTop="8dp"
+						android:ellipsize="end"
+						android:inputType="text"
+						android:singleLine="true"
+						android:textSize="16sp"
+						android:textColor="@color/black"
+						android:textColorHint="@color/black4" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<ImageView
+					android:id="@+id/pickup_gps"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_gravity="center"
+					android:layout_marginEnd="16dp"
+					android:src="@drawable/gps" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="32dp"
+				android:layout_marginTop="8dp"
+				android:background="@color/white"
+				android:elevation="16dp"
+				android:orientation="horizontal">
+				<ImageView
+					android:layout_width="8dp"
+					android:layout_height="8dp"
+					android:layout_marginStart="12dp"
+					android:layout_gravity="center"
+					android:src="@drawable/red_circle" />
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:paddingEnd="8dp"
+					android:paddingStart="12dp"
+					android:paddingTop="4dp"
+					android:paddingBottom="4dp"
+					app:hintTextAppearance="@style/TextLabel">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/drop_field"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:fontFamily="@font/montserrat_semi_bold"
+						android:paddingTop="8dp"
+						android:inputType="text"
+						android:textSize="16sp"
+						android:singleLine="true"
+						android:textColor="@color/black"
+						android:textColorHint="@color/black4"
+						android:hint="Drop Location" />
+				</com.google.android.material.textfield.TextInputLayout>
+				
+			</LinearLayout>
+
+		</LinearLayout>
+		
+	</FrameLayout>
+
+	<!--cabs details-->
+	<RelativeLayout
+		android:layout_marginTop="57dp"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<ImageView
+			android:id="@+id/open"
+			android:layout_width="80dp"
+			android:layout_height="40dp"
+			android:src="@drawable/arrow_up_white"
+			android:layout_alignParentBottom="true"
+			android:background="@drawable/background_button1"
+			android:padding="6dp"/>
+
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cab_option_card_view"
+			android:layout_width="112dp"
+			app:cardCornerRadius="2dp"
+			android:layout_height="286dp"
+			android:foreground="?android:attr/selectableItemBackground"
+			android:clickable="true"
+			android:layout_alignParentBottom="true"
+			android:focusable="true">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<ImageView
+					android:id="@+id/close"
+					android:layout_width="match_parent"
+					android:layout_height="36dp"
+					android:padding="8dp"
+					android:src="@drawable/arrow_down_black"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="@color/background4"/>
+				
+				<ScrollView
+					android:layout_width="match_parent"
+					android:layout_height="180dp"
+					android:scrollbarThumbVertical="@drawable/scrollbar"
+					android:scrollbarSize="4dp">
+
+					<LinearLayout
+						android:padding="16dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+						<TextView
+							android:id="@+id/uber"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Ola"
+							android:drawablePadding="4dp"
+							android:textSize="10sp"
+							android:fontFamily="@font/montserrat_regular"
+							android:textColor="@color/black"
+							android:drawableTop="@mipmap/ola"/>
+
+						<TextView
+							android:id="@+id/quickride"
+							android:layout_marginTop="20sp"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Quickride"
+							android:drawablePadding="4dp"
+							android:textSize="10sp"
+							android:fontFamily="@font/montserrat_regular"
+							android:textColor="@color/black"
+							android:drawableTop="@mipmap/quickride"/>
+
+						<TextView
+							android:id="@+id/poolmyride"
+							android:layout_marginTop="20sp"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Pollmyride"
+							android:drawablePadding="4dp"
+							android:textSize="10sp"
+							android:fontFamily="@font/montserrat_regular"
+							android:textColor="@color/black"
+							android:drawableTop="@mipmap/poolmyride"/>
+
+						<TextView
+							android:id="@+id/ola"
+							android:layout_marginTop="20sp"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="UBER"
+							android:drawablePadding="4dp"
+							android:textSize="10sp"
+							android:fontFamily="@font/montserrat_regular"
+							android:textColor="@color/black"
+							android:drawableTop="@mipmap/uber"/>
+
+						<TextView
+							android:id="@+id/blablacar"
+							android:layout_marginTop="20sp"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="BlaBlaCar"
+							android:drawablePadding="4dp"
+							android:textSize="10sp"
+							android:fontFamily="@font/montserrat_regular"
+							android:textColor="@color/black"
+							android:drawableTop="@mipmap/blablacar"/>
+
+						<TextView
+							android:id="@+id/ola3"
+							android:layout_marginTop="20sp"
+							android:gravity="center"
+							android:layout_gravity="center"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Ola"
+							android:drawablePadding="4dp"
+							android:textSize="10sp"
+							android:fontFamily="@font/montserrat_regular"
+							android:textColor="@color/black"
+							android:drawableTop="@mipmap/cab3"/>
+					</LinearLayout>
+					
+				</ScrollView>
+				
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="@color/background4"/>
+
+				<TextView
+					android:id="@+id/outstation"
+					android:paddingTop="12dp"
+					android:gravity="center"
+					android:layout_gravity="center"
+					android:layout_width="wrap_content"
+					android:layout_height="64dp"
+					android:text="Outstation"
+					android:drawablePadding="4dp"
+					android:textSize="10sp"
+					android:fontFamily="@font/montserrat_regular"
+					android:textColor="@color/black"
+					android:drawableTop="@drawable/simple_car"/>
+			</LinearLayout>
+			
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cab_details_card_view"
+			android:visibility="gone"
+			android:layout_marginStart="90dp"
+			android:layout_width="match_parent"
+			app:cardCornerRadius="2dp"
+			android:layout_height="250dp"
+			android:foreground="?android:attr/selectableItemBackground"
+			android:clickable="true"
+			android:layout_alignParentBottom="true"
+			android:focusable="true">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:text="Only Outstation Service is available right now!"
+				android:fontFamily="@font/montserrat_semi_bold"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:textStyle="italic"/>
+		</androidx.cardview.widget.CardView>
+		
+	</RelativeLayout>
+	
+</FrameLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:ignore="HardcodedText,ContentDescription"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	tools:context=".trango_profile.MyTripsActivity">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="@android:color/transparent"
+		android:fitsSystemWindows="true"
+		tools:ignore="HardcodedText,UnusedAttribute">
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar_widget"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@android:color/transparent"
+			android:layout_marginVertical="8dp"
+			app:contentInsetEnd="8dp"
+			app:menu="@menu/my_trips_menu"
+			app:contentInsetStartWithNavigation="0dp"
+			app:navigationIcon="@drawable/ic_locals_navicon" >
+
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:gravity="end"
+				android:background="@android:color/transparent"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/tv_trip_title"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_alignParentStart="true"
+					android:text="Title"
+					android:gravity="center|start"
+					android:textSize="20sp" />
+
+				<TextView
+					android:layout_alignParentEnd="true"
+					android:id="@+id/tv_redeem"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_marginStart="-104dp"
+					android:onClick="callRedeemIntent"
+					android:background="@drawable/round_rectangle_border_textview"
+					android:gravity="center"
+					android:layout_gravity="end"
+					android:textColor="@android:color/black"
+					android:text="Redeem"/>
+			</RelativeLayout>
+
+		</androidx.appcompat.widget.Toolbar>
+
+	</RelativeLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="?actionBarSize"
+		android:fitsSystemWindows="true" >
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:isScrollContainer="true">
+			<ImageView
+				android:id="@+id/iv_earth_trip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:src="@drawable/earth"
+				android:layout_marginEnd="160dp" />
+
+			<ImageView
+				android:id="@+id/iv_road_trip"
+				android:layout_width="match_parent"
+				android:layout_height="650dp"
+				android:layout_below="@+id/iv_earth_trip"
+				android:src="@drawable/road_trip" />
+
+			<ImageView
+				android:id="@+id/iv_man_trip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/man"
+				android:layout_marginBottom="16dp"
+				android:layout_alignEnd="@+id/iv_road_trip"
+				android:layout_marginEnd="104dp"
+				android:layout_alignBottom="@+id/iv_road_trip" />
+
+			<ImageView
+				android:id="@+id/iv_trip_arrow"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/trip_arrow"
+				android:layout_alignBottom="@+id/iv_man_trip"
+				android:layout_alignEnd="@+id/iv_man_trip"
+				android:layout_marginBottom="16dp"
+				android:layout_marginEnd="32dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="25 Trips"
+				android:padding="16dp"
+				android:layout_alignEnd="@id/iv_trip_arrow"
+				android:layout_alignBottom="@+id/iv_trip_arrow"
+				android:layout_marginEnd="16dp"
+				android:layout_marginBottom="-16dp"
+				android:background="@drawable/round_rectangle_textview" />
+
+			<ImageView
+				android:id="@+id/iv_trip_arrow03"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/trip_arrow"
+				android:layout_alignBottom="@+id/tv_03"
+				android:layout_alignEnd="@+id/tv_03"
+				android:layout_marginBottom="8dp"
+				android:layout_marginEnd="56dp"/>
+
+			<TextView
+				android:id="@+id/tv_03"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:text="03"
+				android:textSize="16sp"
+				android:textColor="@android:color/white"
+				android:backgroundTint="#72BB0A"
+				android:gravity="center"
+				android:layout_marginTop="252dp"
+				android:layout_marginStart="112dp"
+				android:background="@drawable/circle" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="5000 Trips\n(5000 coins)"
+				android:textSize="14sp"
+				android:gravity="center"
+				android:layout_marginBottom="4dp"
+				android:textColor="@android:color/black"
+				android:layout_marginStart="48dp"
+				android:layout_alignBottom="@+id/tv_03"
+				android:layout_alignStart="@id/tv_03" />
+
+			<ImageView
+				android:id="@+id/iv_trip_arrow02"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/trip_arrow"
+				android:layout_alignBottom="@+id/tv_02"
+				android:layout_alignStart="@+id/tv_02"
+				android:rotation="180"
+				android:layout_marginBottom="8dp"
+				android:layout_marginStart="56dp"/>
+
+			<TextView
+				android:id="@+id/tv_02"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:text="02"
+				android:textSize="16sp"
+				android:textColor="@android:color/white"
+				android:backgroundTint="#72BB0A"
+				android:layout_alignParentEnd="true"
+				android:layout_marginEnd="112dp"
+				android:gravity="center"
+				android:layout_marginTop="350dp"
+				android:background="@drawable/circle" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="1000 Trips\n(1000 coins)"
+				android:textSize="14sp"
+				android:gravity="center"
+				android:layout_marginBottom="4dp"
+				android:textColor="@android:color/black"
+				android:layout_marginEnd="48dp"
+				android:layout_alignBottom="@+id/tv_02"
+				android:layout_alignEnd="@id/tv_02" />
+
+			<ImageView
+				android:id="@+id/iv_trip_arrow01"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/trip_arrow"
+				android:rotation="25"
+				android:layout_alignBottom="@+id/tv_01"
+				android:layout_alignEnd="@+id/tv_01"
+				android:layout_marginBottom="24dp"
+				android:layout_marginEnd="56dp"/>
+
+			<TextView
+				android:id="@+id/tv_01"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:text="01"
+				android:textSize="16sp"
+				android:textColor="@android:color/white"
+				android:backgroundTint="#72BB0A"
+				android:gravity="center"
+				android:layout_marginTop="456dp"
+				android:layout_marginStart="216dp"
+				android:background="@drawable/circle" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="100 Trips\n(100 coins)"
+				android:textSize="14sp"
+				android:gravity="center"
+				android:layout_marginBottom="4dp"
+				android:textColor="@android:color/black"
+				android:layout_marginStart="48dp"
+				android:layout_alignBottom="@+id/tv_01"
+				android:layout_alignStart="@id/tv_01" />
+		</RelativeLayout>
+
+	</ScrollView>
+
+</RelativeLayout>

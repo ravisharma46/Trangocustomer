@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "934524430198",
+    "firebase_url": "https://trango-d5fb7.firebaseio.com",
+    "project_id": "trango-d5fb7",
+    "storage_bucket": "trango-d5fb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934524430198:android:c4532f4b776ddc71",
+        "android_client_info": {
+          "package_name": "com.naruto.trango"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934524430198-n7sfeqpf99duuc632l0e2qq6stjcpdnv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.naruto.trango",
+            "certificate_hash": "7f3bfff07f6b7fc9e81fe2afb06471702c43df3e"
+          }
+        },
+        {
+          "client_id": "934524430198-t3vkpn9ui75v2m9aoahvn1qj44bou9ml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVG1U7LwlpLyjElVINXjpzSaiSLe94ETs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934524430198-t3vkpn9ui75v2m9aoahvn1qj44bou9ml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

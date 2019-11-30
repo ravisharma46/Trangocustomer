@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/bottom_sheet_maps_activity"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="240dp"
+    tools:ignore="HardcodedText,UnusedAttribute,RtlSymmetry,ContentDescription"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--/Header of Bottom Sheet - Hidden-->
+        <LinearLayout
+            android:id="@+id/bottom_sheet_header"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/expand_bottom_sheet_btn"
+                android:layout_width="100dp"
+                android:layout_height="24dp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_up_black"/>
+            
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="2dp">
+
+                    <ImageView
+                        android:id="@+id/location_image"
+                        android:layout_width="124dp"
+                        android:layout_height="108dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/park6" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/location_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:text="Your Current Location"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="0dp"
+                            android:fontFamily="@font/gotham_book_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/black3"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginTop="8dp"
+                            android:maxLines="4"
+                            android:ellipsize="end"
+                            android:text="This is your current Location" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="bottom|end"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/distance_logo" />
+
+                            <TextView
+                                android:id="@+id/botton_sheeet_header_distance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="0 km"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/home_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="8dp"
+                    style="?buttonBarStyle"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/navigate1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_button2"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="15sp"
+                        style="?buttonBarButtonStyle"
+                        android:text="@string/navigate"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/advance_book"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="?buttonBarButtonStyle"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textSize="15sp"
+                        android:background="@drawable/background_button1"
+                        android:text="Advance Book"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Main Content of BottomSheet - Hidden-->
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/bottom_sheet_main_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Tollbar-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bottomSheet_back_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_back_red" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/mek_logo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textColor="@color/black"
+                        android:text="Trango"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bottom_sheet_main_content_image_location"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/park6" />
+
+            <!--Dwarka sector 9-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bottom_sheet_main_content_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="Dwaraka Sector 9"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/bottom_sheet_main_content_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black3"
+                    android:fontFamily="@font/gotham_book_regular"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/airport_parking_desc"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_landmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Landmark : "
+                        android:textSize="12sp"
+                        android:fontFamily="@font/gotham_book_regular"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bottom_sheet_main_content_landmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textColor="@color/black3"
+                        android:fontFamily="@font/gotham_book_regular"
+                        android:textSize="12sp"
+                        android:text="Near Dwaraka Metro Station" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--distance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/light_background"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_fare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book_regular"
+                        android:text="Fare"
+                        android:textColor="@color/black3"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/rupee" />
+
+                    <TextView
+                        android:id="@+id/bottom_sheet_main_content_fare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black3"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="25/hr"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/vertical_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book_regular"
+                        android:text="Distance"
+                        android:textColor="@color/black3"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/nav15" />
+
+                    <TextView
+                        android:id="@+id/bottom_sheet_main_content_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black3"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="1.5 km"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/vertical_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_opening_hrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black3"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/gotham_book_regular"
+                        android:text="Opening Hrs."
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/nav16" />
+
+                    <TextView
+                        android:id="@+id/bottom_sheet_main_content_opening_hrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black3"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Open 24 hrs"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Parking slots-->
+            <LinearLayout
+                android:id="@+id/bottom_sheet_main_content_parking_slot_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_parking_slot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gotham_book_regular"
+                    android:text="View all lines :"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/gotham_book_regular"
+                    android:text="Live Updates :"
+                    android:textColor="@color/blue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_background"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="5"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_f"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:textColor="@color/black3"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_book_regular"
+                            android:text="Arrival Time"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/text_c"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:textColor="@color/black3"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_book_regular"
+                            android:text="Congestion"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:weightSum="5"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical"
+                            android:layout_weight="1.5" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+                                <ImageView
+                                    android:id="@+id/iv_map_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/bus" />
+                                <TextView
+                                    android:id="@+id/bus_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginStart="4dp"
+                                    android:text="673" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:text="Mori Gate" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+                        <LinearLayout
+                            android:id="@+id/bike_parking_fare"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|bottom"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1:20pm - 1:22pm"
+                                android:textStyle="bold"
+                                android:textColor="@color/green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1:40pm - 1:42pm" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+
+                        <TextView
+                            android:id="@+id/tv_congestion"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Low"
+                            android:textColor="@color/green"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:weightSum="5"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical"
+                            android:layout_weight="1.5" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+                                <ImageView
+                                    android:id="@+id/iv_map_type2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/bus" />
+                                <TextView
+                                    android:id="@+id/bus_num2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginStart="4dp"
+                                    android:text="333" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:text="Mori Gate" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+                        <LinearLayout
+                            android:id="@+id/bike_parking_fare2"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|bottom"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="1:20pm - 1:22pm"
+                                android:textColor="@color/green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1:40pm - 1:42pm" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+
+                        <TextView
+                            android:id="@+id/tv_congestion2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Moderate"
+                            android:textColor="@color/yellow"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:weightSum="5"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical"
+                            android:layout_weight="1.5" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+                                <ImageView
+                                    android:id="@+id/iv_map_type3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/bus" />
+                                <TextView
+                                    android:id="@+id/bus_num3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginStart="4dp"
+                                    android:text="319" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:text="Mori Gate" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+                        <LinearLayout
+                            android:id="@+id/bike_parking_fare3"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|bottom"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="1:20pm - 1:22pm"
+                                android:textColor="@color/red_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1:40pm - 1:42pm" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+
+                        <TextView
+                            android:id="@+id/tv_congestion3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="High"
+                            android:textColor="@color/light_yellow"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:weightSum="5"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom|center"
+                            android:orientation="vertical"
+                            android:layout_weight="1.5" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+                                <ImageView
+                                    android:id="@+id/iv_map_type4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/bus" />
+                                <TextView
+                                    android:id="@+id/bus_num4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginStart="4dp"
+                                    android:text="273" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:text="Mori Gate" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+                        <LinearLayout
+                            android:id="@+id/bike_parking_fare4"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center|bottom"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="1:20pm - 1:22pm"
+                                android:textColor="@color/red_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1:40pm - 1:42pm" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/vertical_dotted_line" />
+
+
+                        <TextView
+                            android:id="@+id/tv_congestion4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Insane"
+                            android:textColor="@color/red_dark"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layerType="software"
+                        android:background="@drawable/vertical_dotted_line"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="44dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/navigate2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Navigate"
+                    android:onClick="callCheckInIntent"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/background_button2"
+                    android:textColor="@color/white"/>
+
+<!--                <Button-->
+<!--                    android:id="@+id/booknow"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:fontFamily="@font/montserrat_semi_bold"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Book Now"-->
+<!--                    android:background="@drawable/background_button1"-->
+<!--                    android:textColor="@color/white"/>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

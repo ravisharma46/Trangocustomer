@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    tools:ignore="HardcodedText,ContentDescription,RtlSymmetry,NestedWeights"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".checkIn_checkOut.Scan_Checkout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/checkin_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentInsetEnd="8dp"
+            app:menu="@menu/scan_checkout_menu"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/checkin_toolbar_back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:paddingTop="16dp"
+                    android:textColor="@android:color/black"
+                    android:text="Live Directions" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="5 min" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textColor="@color/blue"
+                        android:text="1:20 PM"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".transit.MainMap"/>
+
+        <ImageView
+            android:id="@+id/sc_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/asset_7xhdpi"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="25dp" />
+
+        <ImageView
+            android:id="@+id/btnfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end|center_vertical"
+            android:paddingEnd="5dp"
+            android:src="@drawable/asset_90xhdpi"
+            app:backgroundTint="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="2.5"
+            android:layout_marginTop="20dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/RL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:background="#a5a5a5"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" >
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ride 3 stops to"
+                        android:layout_marginStart="3dp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 min"
+                        android:textColor="@color/white"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RL2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/RL1"
+                    android:padding="15dp" >
+
+                    <ImageView
+                        android:id="@+id/img_trn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="7dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/asset_47xhdpi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jheel Chowk"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/img_trn" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/asset_91xhdpi" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RL3"
+                    android:layout_below="@+id/RL2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="12dp">
+
+
+                    <TextView
+                        android:id="@+id/bank_tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bank Enclave"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <TextView
+                        android:id="@+id/bank_tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bank_tv1"
+                        android:text="Bank Enclave"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
+                    <TextView
+                        android:id="@+id/bank_tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bank_tv2"
+                        android:text="Bank Enclave"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bank_tv3"
+                        android:paddingTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/jheel_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jheel Chowk" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1:20PM"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="10dp" >
+            <Button
+                android:id="@+id/scan_to_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="callOCRIntent"
+                android:background="@drawable/green_button_click"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Scan to checkout"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

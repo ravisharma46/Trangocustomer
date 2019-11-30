@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:ignore="HardcodedText,UnusedAttribute,SmallSp,LabelFor"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	tools:context=".login.LoginActivity">
+
+	<ImageView
+		android:layout_marginTop="8dp"
+		android:id="@+id/logo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal|top"
+		android:src="@drawable/big_app_icon"
+		tools:ignore="ContentDescription" />
+
+	<androidx.cardview.widget.CardView
+		android:layout_marginTop="16dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:paddingVertical="32dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingHorizontal="16dp"
+			android:gravity="bottom"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/montserrat_semi_bold"
+				android:text="Signup"
+				android:textColor="@android:color/black"
+				android:textSize="14sp" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:fontFamily="@font/gotham_book"
+				android:text="Create a new account with Mekpark"
+				android:textColor="@android:color/black"
+				android:textSize="12sp" />
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				app:hintTextAppearance="@style/TextLabel">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/phone_no"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:hint="phone number"
+					android:inputType="phone"
+					android:paddingTop="12dp"
+					android:textColor="@android:color/black"
+					android:textSize="16sp" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				app:hintTextAppearance="@style/TextLabel">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:hint="e-mail id"
+					android:inputType="textEmailAddress|textAutoComplete|textAutoCorrect|textFilter"
+					android:paddingTop="12dp"
+					android:textColor="@android:color/black"
+					android:textSize="16sp" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				app:hintTextAppearance="@style/TextLabel">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:hint="Name"
+					android:inputType="text|textAutoComplete|textAutoCorrect|textFilter"
+					android:paddingTop="12dp"
+					android:textColor="@android:color/black"
+					android:textSize="16sp">
+
+				</com.google.android.material.textfield.TextInputEditText>
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				app:hintTextAppearance="@style/TextLabel"
+				app:passwordToggleEnabled="true">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/password"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:hint="Password"
+					android:inputType="textPassword"
+					android:paddingTop="12dp"
+					android:textColor="@android:color/black"
+					android:textSize="16sp" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="24dp"
+				android:text="Partner Type"
+				android:textColor="@android:color/black"
+				android:fontFamily="@font/gotham_book"
+				android:textSize="10sp" />
+
+			<Spinner
+				android:id="@+id/spinner_partner"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="8dp"
+				android:entries="@array/select_partner_type"
+				android:gravity="center"
+				android:paddingStart="0dp"
+				android:paddingEnd="16dp" />
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@android:color/black" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:orientation="horizontal">
+
+				<CheckBox
+					android:id="@+id/checkbox_referral"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:text="I have a referral code"
+					android:textColor="@android:color/black"
+					android:textSize="12sp" />
+			</LinearLayout>
+
+			<EditText
+				android:visibility="gone"
+				android:id="@+id/referral_code"
+				android:layout_marginTop="8dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:importantForAutofill="no"
+				android:inputType="textAutoComplete" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:fontFamily="@font/gotham_book"
+				android:text="By creating an account"
+				android:textSize="10sp" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:text="I accept the"
+					android:textSize="10sp" />
+
+				<TextView
+					android:id="@+id/terms_and_conditions"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					android:fontFamily="@font/gotham_book"
+					android:text="Terms &amp; Conditions"
+					android:textColor="@color/yellow"
+					android:textSize="10sp" />
+			</LinearLayout>
+
+			<Button
+				android:id="@+id/btn_signup"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="32dp"
+				android:layout_gravity="bottom"
+				style="@style/button_style_1"
+				android:text="Signup"/>
+
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+</LinearLayout>

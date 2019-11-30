@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:title="My Rides"
+		android:id="@+id/menu_my_rides"/>
+	<item
+		android:title="My Booking"
+		android:id="@+id/menu_my_bookings"/>
+	<item
+		android:title="Support"
+		android:id="@+id/menu_support"/>
+
+	<item
+		android:title="Offers"
+		android:id="@+id/menu_offers"
+		app:showAsAction="always"
+		android:icon="@drawable/percentage"/>
+	<item
+		android:title="Faq"
+		android:id="@+id/menu_faq"
+		app:showAsAction="always"
+		android:icon="@drawable/faq"
+		/>
+
+
+
+
+
+
+</menu>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="?attr/actionBarSize"
+	android:orientation="vertical"
+	tools:ignore="HardcodedText">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/wallet_toolbar_widget"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/spring_green"
+		app:contentInsetEnd="8dp"
+		app:contentInsetStartWithNavigation="0dp"
+		app:navigationIcon="@drawable/arrow_back_red"
+		app:title="Title"
+		app:titleTextColor="@android:color/black">
+
+		<Button
+			android:id="@+id/menu_btn"
+			style="@style/wallet_menu_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:fontFamily="@font/montserrat_medium"
+			android:gravity="center"
+			android:textAllCaps="false"
+			android:text="Redeem code"
+			android:textSize="10sp" />
+	</androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

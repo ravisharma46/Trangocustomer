@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:orderInCategory="100"
+		android:id="@+id/sc_menu_share"
+		android:title="Share"
+		android:icon="@drawable/share"
+		app:showAsAction="always" />
+
+	<item
+		android:orderInCategory="101"
+		android:id="@+id/sc_menu_close"
+		android:title="Close"
+		android:icon="@drawable/ic_close"
+		app:showAsAction="always" />
+
+</menu>

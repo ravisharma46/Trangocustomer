@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/parent_liear_wallet_history"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:weightSum="2"
+	tools:context=".transaction_history.TrangoWalletActivity"
+	tools:ignore="HardcodedText,RtlSymmetry,UnusedAttribute,SmallSp">
+
+	<include layout="@layout/custom_wallet_toolbar" />
+
+	<LinearLayout
+		android:id="@+id/wallet_history_view1"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.9"
+		android:background="@color/spring_green"
+		android:orientation="vertical"
+		android:weightSum="4.5">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:background="@android:color/white"
+			android:gravity="center"
+			android:orientation="horizontal"
+			android:paddingHorizontal="16dp"
+			android:weightSum="2"
+			tools:ignore="NestedWeights">
+
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:fontFamily="@font/gotham_medium"
+				android:gravity="center"
+				android:text="Available Coins"
+				android:textSize="13sp" />
+
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_weight="1"
+				android:fontFamily="@font/gotham_medium"
+				android:gravity="center|end"
+				android:paddingEnd="40dp"
+				android:text="10"
+				android:textSize="13sp" />
+		</LinearLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginHorizontal="16dp"
+			android:layout_weight="1"
+			android:gravity="bottom">
+
+			<EditText
+				android:id="@+id/et_enter_promo_code"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:fontFamily="@font/gotham_medium"
+				android:gravity="bottom"
+				android:hint="Enter Amount"
+				android:textColor="@android:color/black"
+				android:importantForAutofill="no"
+				android:inputType="number"
+				android:textSize="14sp" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_alignParentEnd="true"
+				android:layout_marginHorizontal="16dp"
+				android:clickable="true"
+				android:focusable="true"
+				android:textColor="@color/text_color"
+				android:fontFamily="@font/gotham_book"
+				android:gravity="end|bottom"
+				android:onClick="enterPromocode"
+				android:paddingBottom="16dp"
+				android:text="Promocode?"
+				android:textSize="10sp" />
+		</RelativeLayout>
+
+		<LinearLayout
+			style="?attr/buttonBarStyle"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginHorizontal="16dp"
+			android:layout_weight="1"
+			android:gravity="bottom"
+			android:orientation="horizontal"
+			android:weightSum="3">
+
+			<Button
+				android:id="@+id/btn_100"
+				style="?attr/buttonBarButtonStyle"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="8dp"
+				android:layout_weight="1"
+				android:onClick="setPromoText"
+				android:textColor="@android:color/black"
+				android:background="@drawable/border_button"
+				android:fontFamily="@font/montserrat_medium"
+				android:text="100"
+				android:textSize="14sp" />
+
+			<Button
+				android:id="@+id/btn_200"
+				style="?attr/buttonBarButtonStyle"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="8dp"
+				android:layout_weight="1"
+				android:onClick="setPromoText"
+				android:textColor="@android:color/black"
+				android:background="@drawable/border_button"
+				android:fontFamily="@font/montserrat_medium"
+				android:text="200"
+				android:textSize="14sp" />
+
+			<Button
+				android:id="@+id/btn_500"
+				style="?attr/buttonBarButtonStyle"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="8dp"
+				android:layout_weight="1"
+				android:onClick="setPromoText"
+				android:background="@drawable/border_button"
+				android:fontFamily="@font/montserrat_medium"
+				android:text="500"
+				android:textColor="@android:color/black"
+				android:textSize="14sp" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1.5"
+			style="?attr/buttonBarStyle"
+			android:gravity="center">
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/dark_spring_green"
+				android:fontFamily="@font/montserrat_regular"
+				android:text="Add Money"
+				android:layout_marginHorizontal="16dp"
+				style="?attr/buttonBarButtonStyle"
+				android:textAllCaps="false"
+				android:textColor="@android:color/white"
+				android:textSize="14sp" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/wallet_history_view2"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1.1"
+		android:orientation="vertical">
+
+		<LinearLayout
+			style="?attr/buttonBarStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:weightSum="2">
+
+			<Button
+				android:id="@+id/btn_statement"
+				style="?attr/buttonBarButtonStyle"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:background="@android:color/white"
+				android:fontFamily="@font/montserrat_semi_bold"
+				android:text="Statement"
+				android:textColor="@color/dark_spring_green"
+				android:textAllCaps="false"
+				android:textSize="15sp" />
+
+			<Button
+				style="?attr/buttonBarButtonStyle"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textColor="@color/dark_spring_green"
+				android:background="@android:color/white"
+				android:fontFamily="@font/montserrat_semi_bold"
+				android:text="FAQs"
+				android:textAllCaps="false"
+				android:textSize="15sp" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:gravity="end"
+			android:orientation="horizontal"
+			android:weightSum="2">
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="1dp"
+				android:layout_gravity="end"
+				android:layout_weight="1"
+				android:background="@color/spring_green" />
+		</LinearLayout>
+
+		<androidx.core.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fitsSystemWindows="true">
+
+			<LinearLayout
+				style="?attr/buttonBarStyle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<Button
+					android:id="@+id/btn1"
+					style="?attr/buttonBarButtonStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ripple_buttton"
+					android:drawableEnd="@drawable/ic_arrow_right"
+					android:fontFamily="@font/gotham_book"
+					android:onClick="viewText"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="1. What’s new with Mekcoins &amp; Mekcoins wallet? "
+					android:textAlignment="textStart"
+					android:textAllCaps="false"
+					android:textSize="12sp" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<TextView
+					android:id="@+id/tvbtn1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:padding="16dp"
+					android:text="We have made the Mekcoins rules quite simple and more beneficial
+					for all the users! Now you can use flat Mekcoins of the transaction amount,
+					instead of the other modes of payment. Earn much more Mekcoins than ever before
+					and you can save more of the transaction value on every service of bike or car
+					category, basis the specific offer on the category. Mekcoins Earn &amp; Burn is
+					now more personalized to enhance your experience. If you have accumulated
+					Mekcoins balance then Mekcoins burn gets prioritized for you to enjoy immediate
+					benefit."
+					android:textColor="@android:color/black"
+					android:textSize="12sp"
+					android:visibility="gone" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<Button
+					android:id="@+id/btn2"
+					style="?attr/buttonBarButtonStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ripple_buttton"
+					android:drawableEnd="@drawable/ic_arrow_right"
+					android:fontFamily="@font/gotham_book"
+					android:onClick="viewText"
+					android:textColor="@android:color/black"
+					android:padding="16dp"
+					android:text="2. How Mekcoins works? "
+					android:textAlignment="textStart"
+					android:textAllCaps="false"
+					android:textSize="12sp" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<TextView
+					android:id="@+id/tvbtn2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="Mekcoins is a way of ensuring that you get a discount on each
+					transaction. Mekcoins works on the same lines as cashback,Now you can use flat
+					Mekcoins of the transaction amount, instead of the other modes of payment."
+					android:textSize="12sp"
+					android:visibility="gone" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<Button
+					android:id="@+id/btn3"
+					style="?attr/buttonBarButtonStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ripple_buttton"
+					android:drawableEnd="@drawable/ic_arrow_right"
+					android:fontFamily="@font/gotham_book"
+					android:onClick="viewText"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="3. How do I earn SuperCash?"
+					android:textAlignment="textStart"
+					android:textAllCaps="false"
+					android:textSize="12sp" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<TextView
+					android:id="@+id/tvbtn3"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="Offers/promo codes/ coupons can be used to earn Mekcoins, which is
+					automatically credited in your wallet basis the specific T&amp;C of the offer. You
+					can add SuperCash with help of coupon codes on redeem voucher page."
+					android:textSize="12sp"
+					android:visibility="gone" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<Button
+					android:id="@+id/btn4"
+					style="?attr/buttonBarButtonStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ripple_buttton"
+					android:drawableEnd="@drawable/ic_arrow_right"
+					android:fontFamily="@font/gotham_book"
+					android:onClick="viewText"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="4. Is there any minimum transaction limit to use Mekcoins? "
+					android:textAlignment="textStart"
+					android:textAllCaps="false"
+					android:textSize="12sp" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<TextView
+					android:id="@+id/tvbtn4"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="There is no minimum transaction limit for any service payment on
+					our app(like general service of car or bike, repairing, car care, etc.)"
+					android:textSize="12sp"
+					android:visibility="gone" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<Button
+					android:id="@+id/btn5"
+					style="?attr/buttonBarButtonStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ripple_buttton"
+					android:drawableEnd="@drawable/ic_arrow_right"
+					android:fontFamily="@font/gotham_book"
+					android:onClick="viewText"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="5. Will my Mekcoins wallet amount expire?"
+					android:textAlignment="textStart"
+					android:textAllCaps="false"
+					android:textSize="12sp" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<TextView
+					android:id="@+id/tvbtn5"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text="Absolutely not! Mekcoins wallet amount, never expires."
+					android:textSize="12sp"
+					android:visibility="gone" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<Button
+					android:id="@+id/btn6"
+					style="?attr/buttonBarButtonStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/ripple_buttton"
+					android:drawableEnd="@drawable/ic_arrow_right"
+					android:fontFamily="@font/gotham_book"
+					android:onClick="viewText"
+					android:padding="16dp"
+					android:drawablePadding="4dp"
+					android:textColor="@android:color/black"
+					android:text="6. Can I transfer SuperCash to other MobiKwik wallets or a bank account?"
+					android:textAlignment="textStart"
+					android:textAllCaps="false"
+					android:textSize="12sp" />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_gravity="end"
+					android:alpha="0.5"
+					android:background="@color/spring_green" />
+
+				<TextView
+					android:id="@+id/tvbtn6"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/gotham_book"
+					android:padding="16dp"
+					android:textColor="@android:color/black"
+					android:text=" Sorry! You cannot transfer Mekcoins to another wallet or to a
+					bank account. You can use it everywhere on Mekvahan for all transactions."
+					android:textSize="12sp"
+					android:visibility="gone" />
+			</LinearLayout>
+
+		</androidx.core.widget.NestedScrollView>
+
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingVertical="8dp"
+	tools:ignore="ContentDescription,HardcodedText,RtlSymmetry,UnusedAttribute,SmallSp">
+
+	<TextView
+		android:id="@+id/tv_wallet_history_date"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fontFamily="@font/gotham_book"
+		android:gravity="center|start"
+		android:paddingVertical="8dp"
+		android:text="date"
+		android:textColor="@color/dark_spring_green"
+		android:textSize="10sp" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingVertical="12dp"
+		android:weightSum="7.5">
+
+		<ImageView
+			android:id="@+id/iv_wallet_history_image"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:src="@drawable/money_added" />
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="4"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/tv_wallet_history_event"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/gotham_medium"
+				android:gravity="center|start"
+				android:text="Money event"
+				android:textColor="@android:color/black"
+				android:textSize="12sp" />
+
+			<TextView
+				android:id="@+id/tv_wallet_history_time"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/gotham_book"
+				android:gravity="center|start"
+				android:text="time"
+				android:textColor="@android:color/black"
+				android:textSize="10sp" />
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/tv_wallet_history_amount"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2.5"
+			android:fontFamily="@font/gotham_medium"
+			android:gravity="center|end"
+			android:paddingEnd="56dp"
+			android:text="\u20B9 100.00"
+			android:textColor="@android:color/black"
+			android:textSize="13sp" />
+
+	</LinearLayout>
+
+</LinearLayout>
